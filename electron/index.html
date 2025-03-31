@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exnet Connect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo">
+        <div class="logo-text">EXNET</div>
+        <div class="tagline">Tu propio internet</div>
+    </div>
+    
+    <div class="container">
+        <div class="decoration"></div>
+        <h2>Conectar a servidor Exnet</h2>
+        <div class="form-group">
+            <input type="text" id="urlInput" placeholder="Ej: https://mired.exnet.cloud" />
+            <button onclick="verificarURL()">Conectar</button>
+        </div>
+        
+        <div class="history" id="historyContainer">
+        </div>
+        
+        <div class="footer">
+            <p>Presiona Enter después de escribir para conectar directamente</p>
+        </div>
+        
+        <div class="loading-screen" id="loadingScreen">
+            <div class="spinner"></div>
+            <div class="loading-text">Conectando a servidor</div>
+            <div class="status-text" id="statusText">Verificando disponibilidad...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
