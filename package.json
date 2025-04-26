@@ -1,56 +1,43 @@
 {
-<<<<<<< HEAD
+  "name": "exnet-desktop",
+  "version": "1.0.0",
+  "description": "Aplicación de escritorio de ROA Exnet",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron . --watch electron/",
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "com.exnet.desktop",
+    "productName": "Exnet Desktop",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron/**/*",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": ["nsis"],
+      "icon": "electron/exnet.ico"
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "icon": "electron/exnet.png"
+    }
+  },
+  "keywords": ["Exnet", "Symfony", "Electron", "Desktop"],
+  "author": "ROA",
+  "license": "MIT",
   "dependencies": {
-    "axios": "^1.8.4",
-    "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "electron-is-dev": "^2.0.0",
+    "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^24.6.4",
+    "nodemon": "^3.0.1"
   }
 }
-=======
-    "name": "exnet-desktop",
-    "version": "1.0.0",
-    "description": "Aplicación de escritorio de ROA Exnet",
-    "main": "electron/main.js",
-    "scripts": {
-      "start": "electron .",
-      "dev": "nodemon --exec electron . --watch electron/",
-      "build": "electron-builder",
-      "postinstall": "electron-builder install-app-deps"
-    },
-    "build": {
-      "appId": "com.exnet.desktop",
-      "productName": "Exnet Desktop",
-      "directories": {
-        "output": "dist"
-      },
-      "files": [
-        "electron/**/*",
-        "assets/**/*"
-      ],
-      "win": {
-        "target": ["nsis"],
-        "icon": "exnet.ico"
-      },
-      "mac": {
-        "target": ["dmg"],
-        "icon": "assets/icon.icns"
-      },
-      "linux": {
-        "target": ["AppImage"],
-        "icon": "assets/icon.png"
-      }
-    },
-    "keywords": ["Exnet", "Symfony", "Electron", "Desktop"],
-    "author": "ROA",
-    "license": "MIT",
-    "dependencies": {
-      "electron-is-dev": "^2.0.0",
-      "electron-store": "^8.1.0"
-    },
-    "devDependencies": {
-      "electron": "^28.1.0",
-      "electron-builder": "^24.6.4",
-      "nodemon": "^3.0.1"
-    }
-  }
->>>>>>> 3979c52 (Add base src)
