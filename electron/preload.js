@@ -28,7 +28,6 @@ contextBridge.exposeInMainWorld('exnetDesktop', {
 window.addEventListener('DOMContentLoaded', () => {
   const style = document.createElement('style');
   style.textContent = `
-    /* Estilos específicos para la versión de escritorio */
     .exnet-desktop-badge {
       position: fixed;
       bottom: 10px;
@@ -47,7 +46,6 @@ window.addEventListener('DOMContentLoaded', () => {
       opacity: 0.8;
     }
     
-    /* Mejoras para la experiencia de escritorio */
     ::-webkit-scrollbar {
       width: 8px;
       height: 8px;
